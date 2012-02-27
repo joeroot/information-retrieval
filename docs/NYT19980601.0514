@@ -1,0 +1,57 @@
+NYT19980601.0514
+NEWS STORY
+1998 - 06-01 21 : 17
+A9330 & Cx1f ; ttd-z r f & Cx13 ; & Cx11 ; BC-NETWORKSIDE-SFCHRON & LR ; 06 - 01 0950
+BC-NETWORKSIDE-SFCHRON
+( For use by clients of the New York Times News Service ) High-Tech Systems Easy to Set Up By Jonathan Marshall c.1998 San Francisco Chronicle If computers could speak , they 'd beg to be networked whenever two or more inhabit the same office .
+Networks can pay huge dividends by letting employees swap files , share printers and hop onto the Internet at will .
+But they used to require expensive consultants , exotic hardware and complicated software , making them something to avoid whenever possible .
+Improved technology has slashed the cost and complexity of networks .
+Today , even an amateur can set up a network for a few hundred dollars and a few hours ' time .
+On the hardware side , a network requires two or more computers , each with a network interface card inside .
+It needs a central box called a `` hub '' to which the computers all connect .
+And it needs cables to link the network cards to the hub .
+& LR ; & LR ; Computer catalogs and stores are full of such devices these days .
+For software , a simple network needs only Windows 95 on every PC .
+Earlier versions of Windows and DOS won n't work without additional software .
+( The Macintosh operating system works fine for networking Macs . )
+For shared Internet use , add a `` router , '' a device which connects the network hub with the Internet connection , such as a regular phone line or higher speed , digital ISDN line .
+The router lets several people surf the Web at the same time and protects the network against unauthorized sabotage by hackers .
+An efficient network also centralizes files on one computer , called a `` server , '' a sort of file lending library .
+Employees can call up client records , accounting information , old correspondence and other files off the server .
+Files can then be backed up daily in one simple operation .
+The good news is that none of this equipment costs much .
+The server , which is optional , is the most expensive item .
+A fancy server , with huge amounts of disk storage , a backup tape drive and a redundant power supply , can cost as much as $ 4 , 000 .
+But an ordinary Pentium computer & UR ; & LR ; is perfectly adequate and costs only $ 1 , 000 , putting it well within the price range of most small businesses .
+If you are outfitting a new office with computers , buy them with network interface cards already installed .
+Otherwise , you have to open up the computer case , push the card into an empty slot , and hope that Windows recognizes the card properly .
+It doesn n't take a Ph.D .
+to do the job .
+Buy so-called `` 10 / 100 '' cards , capable of operating at 100 megabits per second as well as the usual network speed of 10 Mbps , just in case you ever need the extra performance .
+Such cards typically cost $ 40 to $ 70 each .
+You 'll also need one or more hubs to connect all your computers .
+Make sure the hubs have a few more `` ports '' than you have computers , to make room for growth .
+For example , if you have five computers , buy an eight-port hub .
+That will give you the capacity to connect three more computers in the future .
+An eight-port hub from a top brand , such as 3 Com or Intel , should retail for about $ 76 ; cheaper but still capable hubs from Netgear , NDC or D-Link sell for as little as $ 59 .
+All these companies have good reputations .
+Netgear 's product line , however , recently won an `` Editor 's Choice '' award from PC Magazine for `` the best combination of extensive offerings , low pricing , ease of use , and excellent technical support . ''
+Finally , you 'll need cables to connect the network cards to the hub .
+Ask for so-called `` category 5 '' wiring with RJ-45 connectors .
+Such cables don n't cost much and come in a variety of lengths .
+If you have only a handful of computers , you can save time buying a simple networking kit from a company such as Netgear or 3 Com 's OfficeConnect division .
+The boxes have everything you need to get started , including cables , cards , a hub and simple instructions .
+If your employees are power users , sending big graphics files over the network , consider buying a faster hub , called a 100 Base-T hub .
+These operate at 100 megabits per second , 10 times as fast as usual .
+Catalogs sell them for $ 215 to $ 350 for an eight-port hub .
+For Internet access , many small businesses choose ISDN connections for speedy Web browsing along with two phone lines for voice conversations .
+ISDN routers , which let users share the same ISDN line for Internet access , now cost under $ 500 and often come with a small hub built in .
+If your network grows beyond 15 or 20 computers ( even fewer , if you get powerful network accounting packages or other heavy-duty applications ) , you may need to consider a more complex `` client-server '' network with a powerful network operating system such as Windows NT or Novell 's Netware .
+Such operating systems are more robust than Windows 95 , so your network will be less prone to crash .
+And they come with many powerful features , such as the ability to give users access to certain files but not others .
+The downside is , client-server networks aren n't for novices .
+To set one up and maintain it , ask around for a consultant who comes with good references .
+Before you rush out and hire a consultant , however , learn the basics from one of several excellent primers , such as `` Networking for Dummies '' by Doug Lowe ( IDG Books ) or `` Absolute Beginner 's Guide to Networking '' by Mark Gibbs and Todd Brown ( Sams ) .
+Also , check out 3 Com 's informative Web site ( http : / / www.3com.com / smallbusiness / basics / calculator / index.html ) , which includes information on how to obtain a free `` network benefits calculator '' to help you estimate the potential productivity gains of a network .
+NYT-06-01-98 2117 EDT & QL ;

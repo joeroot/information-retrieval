@@ -1,0 +1,56 @@
+NYT19980601.0283
+NEWS STORY
+1998 - 06-01 16 : 21
+A8663 & Cx1f ; sci-z u a & Cx13 ; & Cx11 ; BC-SCI-COMPUTER-COLUMN-N 06 - 01 1073
+BC-SCI-COMPUTER-COLUMN-NYT
+THE HIGH PRICE OF GETTING SOMETHING FOR NOTHING
+( The Science Times ) ( jt ) By STEPHEN MANES c.1998 N.Y .
+Times News Service
+One of the most appealing aspects of the Web is getting something for nothing , not counting connection fees .
+One short-term no-cost offering is Outlook 98 , the latest version of Microsoft 's ambitious calendar , E-mail and address book package .
+The software ( not to be confused with the very different E-mail-only Outlook Express program that comes with Internet Explorer ) is available free for the downloading at www.microsoft.com / outlook / until June 30 ; a CD-ROM can be ordered for $ 9.95 .
+On July 1 , the official price goes up to $ 109 except for registered users of Office 97 , Outlook 97 or Exchange Server .
+Something for nothing often ends up incurring subtle costs .
+First surprise : If you already have Microsoft Office 97 , you may first need to install the Office 97 Service Release 1 Patch , also known as SR-1 .
+This is a collection of repairs for several unfortunate gaffes , including the one in Word 97 that refused to save files correctly in the prior Word format despite what the program claimed on the screen .
+SR-1 also repairs one of my all-time favorite demonstrations of Microsoft 's emphasis on quality , the Outlook calendar that put Thanksgiving on various Tuesdays and Wednesdays over the next few years , but never on Thursday , not even in the year 2000 .
+Since the SR-1 fixes must be in place before you can use a forthcoming SR-2 patch , which includes another hunk of code that repairs potential errors in Excel 's spreadsheets , installing SR-1 is a good idea .
+Most recent versions of Office already include the SR-1 fixes , but it can be impossible to tell until you have installed the program .
+The clue : When you run a repaired version and click the `` About '' item under the Help menu , the rubric `` SR-1 '' will appear after the program 's name .
+Retail copies sold today should contain the updated code , but a CD with the defective version came with a new Micron computer that I tested a month ago , and other computer makers may still be shipping the unfixed version .
+Things get stranger .
+If for some reason you need to reinstall Office 97 or one of its programs , you will need to run the patch again .
+Worse , if you need to install a smaller component , you will need to uninstall Office in its entirety , reinstall it , and then run the patch program .
+The details in all their stupefying glory are available at the hard-to-find - www.microsoft.com / office / office97 / servicerelease / sr1readme.htm page .
+So one expense of getting Outlook 98 for nothing is your time .
+Microsoft 's Web site informed me that the 7-megabyte patch download would take a minimum of 35 minutes over a 28.8 kilobit-per-second modem .
+It actually took a lot longer .
+Two successive attempts to grab the file from Microsoft 's own site and one in California stalled halfway through .
+A site in New Zealand actually worked .
+The final round started with the Internet Explorer 3 announcement that the estimated download time was 36 minutes , which swelled to 40 , then an hour , then more before ending with a series of countdowns that claimed 11 seconds remaining , then 7,5,4,1 and _ whoops !
+_ 1 minute , 2 seconds .
+Including the false starts , the whole process took two hours .
+When I finally got to install the thing , a dispiriting message warned that `` the patch can take up to 45 minutes to finish depending on your hardware , '' but on a fast new machine it took only 5.
+If you fail to check out the system requirements for Outlook 98 , you might miss an essential point .
+The program requires Internet Explorer 4.01 and installs it for you unless it is already on your machine .
+That wipes out any previous version , even if you happen to prefer it , but you do get to enjoy IE 4.01 's many bugs and anomalies and a reduction in disk space , and you can still use Netscape Navigator if you want to .
+On my machine , which already had Outlook 97 and Internet Explorer 3 installed , the `` standard '' installation grabbed 54 megabytes of disk space for itself despite omitting some potentially useful optional components .
+The official download estimate was three to four hours ; in the interest of sanity I cheated and used a CD-ROM .
+And once Outlook 98 was finally up and running ?
+Well , it can do all sorts of things you may have never even considered , like turning an electronic message into a calendar entry or a to-do item simply by dragging it from one place to another .
+It can present a concise one-page summary of the day 's appointments , ongoing tasks and unread mail .
+It can keep an automatic record of how you have been spending your time with Office applications and quickly launch that file you were working on last Thursday .
+It can color-code your messages so the ones from the boss appear in red and the ones from duck salesmen turn up in teal .
+But trying to figure out just how to do these things , or even simpler ones , can be infuriating .
+Although the program has been modestly improved since its first release , new users will cry out for a tutorial , a book or , better still , a complete redesign .
+The program 's many capabilities will be overkill for most people , because its quirky , unfinished , inconsistent interface buries them under a mound of puzzling options and tricky gizmos that conceal what you are trying to find .
+Like its competitors , it fails to shift grunt work from human to machine by learning from what you do .
+Time and again , Outlook 's features fail to work the way you expect them to .
+Yellow on-screen notes are described as `` the electronic equivalent of paper sticky notes , '' but they disappear from the screen the moment you open something on top of them .
+The monthly calendar can not display a week with Sunday first , even if you set up your workweek to begin on that day .
+And in a throwback to the past , Outlook 98 can not always close itself when you tell Windows to shut down .
+You have to do the job for it , sometimes while facing down Windows error messages .
+You can get along with Outlook 98 if you are willing to work at it , but most users are likely to be more comfortable with simpler E-mail software like Outlook Express and personal information managers like Sidekick or the software that comes with the Palm computer .
+As something for nothing , Outlook 98 turns out to be too much and not enough .
+& QL ;
+NYT-06-01-98 1621 EDT & QL ;

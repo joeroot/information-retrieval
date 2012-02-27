@@ -1,0 +1,46 @@
+NYT19980601.0519
+NEWS STORY
+1998 - 06-01 21 : 21
+A9340 & Cx1f ; ttd-z r f & Cx13 ; & Cx11 ; BC-YEAR2000-SFCHRON & LR ; 06 - 01 0843
+BC-YEAR2000-SFCHRON
+( For use by clients of the New York Times News Service ) How to Avoid Problems Related to Year 2000 By Arthur M. Louis c.1998 San Francisco Chronicle There 's been a lot of fuss lately about the Year 2000 computer problem and its potentially devastating effect on big business .
+But the glitch could easily trip up small businesses as well _ something most of their proprietors don n't seem to realize .
+The Year 2000 problem stems from a shortcut used by computer programmers in the 1960s and '70s to store only the last two digits of a year _ `` 74 '' instead of `` 1974 , '' for example .
+It could cause computers to read January 1 , 2000 as January 1 , 1900 , which in turn could bollix accounting , payroll , tax and customer billing records , inventories and supplier relations .
+`` We feel this is a very serious issue , '' said Dan Hill , director of the Small Business Administration 's office of technology in Washington , D.C. `` Every small business should address it . ''
+& UR ; & LR ;
+There are plenty of organizations _ including the SBA , Microsoft , the Federal Reserve Bank of San Francisco and a host of technology-service providers _ that are eager to help .
+But businesses must make the first move , by seeking that help .
+A new study sponsored by Wells Fargo Bank found that 82 percent of all small businesses are `` at risk '' for Year 2000-related problems , yet fewer than a third are taking the matter seriously enough to act .
+Many small businesses believe the problem can n't affect them if their computers are relatively new and they recently bought programs off the shelf from established vendors such as Microsoft .
+It 's true that most modern hardware and software come free of Year 2000 ( Y2K ) problems .
+But even these computer systems can become contaminated , Hill warns , `` if you 've modified your software _ for example by bringing in a file you had before that was not Y2K-compliant . ''
+Year 2000 can even derail businesses that don n't have computers .
+Your cash register may malfunction because its embedded chips won n't recognize the new millennium .
+Even if you have no Year 2000 problems of your own , your business could come to a halt because your suppliers haven n't solved their own problems .
+A dry-cleaning establishment may find itself unable to get cleaning solution from a supplier that has shut down to debug its inventory controls .
+If you are an auto-parts distributor , and you 've told your computer that ABC Garage must pay its bill by February 2000 , the computer might conclude that the payment is a century overdue , and grind out a nasty letter .
+Experts advise every small business to thoroughly assess its potential exposure to Year 2000 glitches .
+Once you 've ensured that you are Year 2000-compliant , that fact can be a selling point among customers .
+If you guarantee them hassle-free service into the next century , `` it could make you more competitive than your rival down the street , '' said Hill .
+Some small businesses have in-house technical staffs that can cope with Year 2000 problems .
+But most will have to go to outside service providers .
+There is lots of useful written material that will help you determine whether your business might be vulnerable .
+The Federal Reserve Bank of San Francisco has prepared a booklet entitled `` Are You Ready to Do Business in the Year 2000 ? ''
+It offers a thorough analysis of Year 2000 problems from the small business viewpoint , discusses remedies and includes a list of 10 Web sites where you can find more details .
+The bank prefers that you read that document on its own Web site at & LR ; www.frbsf.org / fiservices / cdc , & LR ; because its supply of booklets is limited and so is its staff time .
+But if you don n't have Web access try calling ( 415 ) 974 - 2861 .
+The SBA includes a wealth of useful Year 2000 advice on its Web site at & LR ; www.sba.gov & LR ; .
+It also provides hotlinks to other expert sources .
+Many small businesses may discover that the vendor that installed their computer system has gone out of business .
+Microsoft 's Web site will help you pick another firm to lead you through the Year 2000 maze .
+The company has compiled a database of 230,000 nationwide _ searchable by ZIP code .
+Go to & LR ; www.microsoft.com / & LR ; & LR ; smallbiz , & LR ; and click on `` Find a Technology Consultant . ''
+Nigel Burton , Microsoft 's director of small-business programs , said the list has been thoroughly vetted by his company 's staffers .
+`` We telephoned each one , and made sure they were all interested in doing this work , '' he remarks .
+One of the 25 that Microsoft lists within 32 miles of The Chronicle 's building is All Systems Go , of Redwood City .
+`` We are auditing all 250 of our customers for Year 2000 , '' said Renee Courington , the company 's president .
+It costs $ 1,000 to $ 2,000 `` to have every system looked at , every piece of software analyzed . ''
+Sometimes , when a computer system is hopelessly outdated , All Systems suggests buying a new one .
+More often it recommends hiring independent programmers to `` make patches . ''
+NYT-06-01-98 2121 EDT & QL ;

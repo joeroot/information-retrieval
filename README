@@ -1,0 +1,10 @@
+docs.tar.gz contains the complete document collection as a gzipped tar 
+archive. To unzip the file, do:
+gunzip docs.tar.gz
+To unpack the tar archive, do:
+tar xvf docs.tar
+
+In the data directory there is a gzipped version of the index. To unzip 
+it, do:
+gunzip index.gz
+
