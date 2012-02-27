@@ -1,4 +1,4 @@
-class Search
+class Index
 
   DATA_PATH = "#{Dir.pwd}/../data/"
   DOC_PATH = "#{Dir.pwd}/../docs/"
