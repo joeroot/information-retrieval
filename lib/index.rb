@@ -1,3 +1,7 @@
+# TODO: Check whether Rocchio should apply across all terms, i.e. do we now
+# generate a query which has all of the terms seen in feedback documents,
+# weighted accordingly.
+
 class Index
 
   DATA_PATH = "#{File.dirname(__FILE__)}/../data/"
@@ -19,7 +23,10 @@ class Index
     # Terms are stored in a Hash, with each term hash containing a frequency 
     # score and a documents hash. The documents hash is structured such that 
     # each document maps to the term's frequency within the document.
-    self.terms = Hash.new { |h, k| h[k] = {frequency: 0.0, documents: Hash.new { |h, k| h[k] = 0 } } }
+    self.terms = Hash.new { |h, k| h[k] = {
+      frequency: 0.0, 
+      documents: Hash.new { |h, k| h[k] = 0 } 
+    } }
 
     # Lengths are stored in a Hash, mapping each document to it's length.
     self.lengths = {}
@@ -123,7 +130,9 @@ class Index
     end
 
     # Each document's score is normalised according to it's length
-    # results.each{|document, result| results[document] = result/self.lengths[document]}
+    results.each do |document, result| 
+      results[document] = result/self.lengths[document]
+    end
 
     # The results are sorted according to most relevant first. If a limit has 
     # been requested this is then enforced, before finally returning the
@@ -136,8 +145,8 @@ class Index
   # Given a query, this function tokenises it, before applying the Rocchio 
   # algorithm to generate a set of weights for each term based upon feedback.
   def rocchio query
-    alpha = 1
-    beta = 0.75
+    alpha = 0.0
+    beta = 1.75
     gamma = -0.25
     
     query.split(" ").map do |term| 
@@ -148,7 +157,7 @@ class Index
       if document_frequency > 0 
         self.feedback.each do |document, feedback|
           frequency = self.terms[term][:documents][document]
-          adjust = frequency/document_frequency # have not further divided by document length, i.e. just d, not d/|d|
+          adjust = frequency/document_frequency
           weight += (feedback ? beta : gamma) * adjust
         end
       end
