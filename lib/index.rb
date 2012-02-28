@@ -1,30 +1,38 @@
 class Index
 
-  DATA_PATH = "#{Dir.pwd}/../data/"
-  DOC_PATH = "#{Dir.pwd}/../docs/"
+  DATA_PATH = "#{File.dirname(__FILE__)}/../data/"
+  DOC_PATH = "#{File.dirname(__FILE__)}/../docs/"
   FILE_NAMES = {
     index: "index.txt", 
-    relevant: "relevant.txt",
-    lengths: "doc_lengths.txt"
+    relevant: "relevant_nofback.txt",
+    lengths: "doc_lengths.txt",
+    feedback: "feedback.txt"
   }
   QUERIES = [
     "financial instruments being traded on the American stock exchange",
     "stocks shares stock market exchange New York traded trading"
   ]
 
-  attr_accessor :terms, :lengths, :n, :relevant
+  attr_accessor :terms, :lengths, :n, :relevant, :feedback
 
   # term  document_frequency  {doc  term_frequency}*
   def initialize
     self.terms = Hash.new { |h, k| h[k] = {frequency: 0.0, documents: Hash.new { |h, k| h[k] = 0 } } }
     self.lengths = {}
     self.relevant = []
+    self.feedback = []
+
+    feedback = DATA_PATH + FILE_NAMES[:feedback]
+    File.open(feedback, "r").each_line do |line|
+      document, feedback = self.parse_feedback line
+      self.feedback << [document, feedback] 
+    end
 
     index = DATA_PATH + FILE_NAMES[:index]
     File.open(index, "r").each_line do |line|
-      term, documents = parse_term line
+      term, documents = self.parse_term line
       documents.each do |document, frequency|
-        self.terms[term][:documents][document] += frequency
+        self.terms[term][:documents][document] += frequency 
       end
       self.terms[term][:frequency] = self.terms[term][:documents].length
     end
@@ -33,7 +41,7 @@ class Index
 
     lengths = DATA_PATH + FILE_NAMES[:lengths]
     File.open(lengths, "r").each_line do |line|
-      document, length = parse_length line
+      document, length = self.parse_length line
       self.lengths[document] = length
     end
 
@@ -41,6 +49,7 @@ class Index
     File.open(relevant, "r").each_line do |line|
       self.relevant << line.strip
     end
+
   end
 
   def parse_term line
@@ -58,17 +67,22 @@ class Index
     return parts[0], parts[1].to_f
   end
 
-  def query q, limit=nil
-    q = q.split(" ").map{|term| term.downcase}
+  def parse_feedback line
+    parts = line.split(" ")
+    return parts[0], parts[1].to_i==1
+  end
+
+  def query q, limit=nil, feedback=true
+    q = self.rocchio(q)
 
     results = Hash.new { |h, k| h[k] = 0 }
 
-    q.each do |term|
+    q.each do |term, weight|
       document_frequency = self.terms[term][:frequency]
       if document_frequency > 0 
         documents = self.terms[term][:documents]
         documents.each do |document, frequency|
-          results[document] += frequency/document_frequency
+          results[document] += frequency/document_frequency * weight
         end
       end
     end
@@ -80,9 +94,33 @@ class Index
     return results
   end
 
+  def rocchio query
+    alpha = 1
+    beta = 0.75
+    gamma = -0.25
+    
+    query.split(" ").map do |term| 
+      term = term.downcase
+      weight = alpha * 1
+
+      document_frequency = self.terms[term][:frequency]
+      if document_frequency > 0 
+        self.feedback.each do |document, feedback|
+          frequency = self.terms[term][:documents][document]
+          adjust = frequency/document_frequency # have not further divided by document length, i.e. just d, not d/|d|
+          weight += (feedback ? beta : gamma) * adjust
+        end
+      end
+
+      weight = 0 if weight < 0
+
+      [term, weight]
+    end
+  end
+
   def precision_at_recall q=QUERIES[0]
     results = self.query q, 500
-    results = results.map{|r| r[0]}
+    results = results.map{|r| r[0]} - self.feedback.map{|f| f[0]}
 
     positions = self.relevant.map{|document| results.index(document)}.sort
 
