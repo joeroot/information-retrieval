@@ -150,14 +150,14 @@ class Index
   # algorithm to generate a set of weights for each term based upon feedback.
   def rocchio query
     alpha = 0
-    beta = 0.25
+    beta = 0.75
     gamma = -0.25
     
     query = query.downcase.split(" ")
     init = query
 
     # We append each positive feedback document's terms to our new query vector. 
-    self.feedback.each { |document, feedback, terms| query |= terms if feedback}
+    self.feedback.each { |document, feedback, terms| query |= terms if feedback }
 
     query.map do |term| 
       # If the term was in the original query, we set its vector wight to 1, 
