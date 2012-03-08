@@ -68,8 +68,8 @@ class Index
     # Reads and parses the feedback file.
     feedback = DATA_PATH + FILE_NAMES[:feedback]
     File.open(feedback, "r").each_line do |line|
-      document, feedback = self.parse_feedback line
-      self.feedback << [document, feedback] 
+      document, feedback, terms = self.parse_feedback line
+      self.feedback << [document, feedback, terms] 
     end
 
   end
@@ -101,7 +101,10 @@ class Index
   # is marked as relevant or not.
   def parse_feedback line
     parts = line.split(" ")
-    return parts[0], parts[1].to_i==1
+    document = parts[0]
+    feedback = parts[1].to_i==1
+    terms = self.terms.map{|term, values| (values[:documents].keys.include? document) ? term : nil}.compact
+    return document, feedback, terms
   end
 
   # Query function takes a query, a limit on the number of results to be 
@@ -110,6 +113,7 @@ class Index
   def query q, limit=nil, feedback=true
     # The query is tokenised and weighted according to the Rocchio algorithm
     q = self.rocchio(q)
+    puts q.length
 
     # A results array is initialised, in which each document maps to its results
     # weight
@@ -145,17 +149,25 @@ class Index
   # Given a query, this function tokenises it, before applying the Rocchio 
   # algorithm to generate a set of weights for each term based upon feedback.
   def rocchio query
-    alpha = 0.0
-    beta = 1.75
+    alpha = 0
+    beta = 0.25
     gamma = -0.25
     
-    query.split(" ").map do |term| 
-      term = term.downcase
-      weight = alpha * 1
+    query = query.downcase.split(" ")
+    init = query
+
+    # We append each positive feedback document's terms to our new query vector. 
+    self.feedback.each { |document, feedback, terms| query |= terms if feedback}
+
+    query.map do |term| 
+      # If the term was in the original query, we set its vector wight to 1, 
+      # otherwise its set to 0.
+      weight = (init.include? term) ? 1 : 0
+      weight += alpha
 
       document_frequency = self.terms[term][:frequency]
       if document_frequency > 0 
-        self.feedback.each do |document, feedback|
+        self.feedback.each do |document, feedback, terms|
           frequency = self.terms[term][:documents][document]
           adjust = frequency/document_frequency
           weight += (feedback ? beta : gamma) * adjust
