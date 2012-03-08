@@ -1,6 +1,4 @@
-# TODO: Check whether Rocchio should apply across all terms, i.e. do we now
-# generate a query which has all of the terms seen in feedback documents,
-# weighted accordingly.
+require 'stemmer'
 
 class Index
 
@@ -111,7 +109,7 @@ class Index
   # returned, and a boolean denooting whether it should take feedback into 
   # account.
   def query q, limit=nil, feedback=true
-    # The query is tokenised and weighted according to the Rocchio algorithm
+    # The query is tokenised and weighted according to the 2hio algorithm
     q = self.rocchio(q)
     puts q.length
 
@@ -217,39 +215,3 @@ class Index
   end
 
 end
-
-
-# EVALUATION: Practical 1
-# 
-# "financial instruments being traded on the American stock exchange" => 
-#   {:average=>0.15512524462717786, 
-#    :results=>[
-#      {:precision=>0.15789473684210525, :recall=>0.09375}, 
-#      {:precision=>0.2, :recall=>0.1875}, 
-#      {:precision=>0.2631578947368421, :recall=>0.3125}, 
-#      {:precision=>0.24074074074074073, :recall=>0.40625}, 
-#      {:precision=>0.15841584158415842, :recall=>0.5}, 
-#      {:precision=>0.14393939393939395, :recall=>0.59375}, 
-#      {:precision=>0.1286549707602339, :recall=>0.6875}, 
-#      {:precision=>0.08695652173913043, :recall=>0.8125}, 
-#      {:precision=>0.0830945558739255, :recall=>0.90625}, 
-#      {:precision=>0.08839779005524862, :recall=>1.0}
-#    ]}
-# 
-# "stocks shares stock market exchange New York traded trading" =>
-#   {:average=>0.6774003935705063, 
-#    :results=>[
-#      {:precision=>1.0, :recall=>0.09375}, 
-#      {:precision=>0.8571428571428571, :recall=>0.1875}, 
-#      {:precision=>0.9090909090909091, :recall=>0.3125}, 
-#      {:precision=>0.9285714285714286, :recall=>0.40625}, 
-#      {:precision=>0.8, :recall=>0.5}, 
-#      {:precision=>0.59375, :recall=>0.59375}, 
-#      {:precision=>0.5, :recall=>0.6875}, 
-#      {:precision=>0.45614035087719296, :recall=>0.8125}, 
-#      {:precision=>0.4027777777777778, :recall=>0.90625}, 
-#      {:precision=>0.32653061224489793, :recall=>1.0}
-#    ]}
-# 
-# 
-# 
